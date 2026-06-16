@@ -33,6 +33,10 @@ const generateSummary = (name, city, supportNeeded, concern) => {
 };
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('CareConnect API is running!');
+});
+
 app.post('/api/patients', async (req, res) => {
   try {
     const { name, age, gender, email, phone, city, medicalConcern, supportNeeded, notes } = req.body;
